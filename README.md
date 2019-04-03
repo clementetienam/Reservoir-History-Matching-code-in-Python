@@ -1,0 +1,3 @@
+# Reservoir-History-Matching-code-in-Python
+This is a Python script to conduct Reservoir History matching using the Bayesian Technique Ensemble Smoother with Multiple Data Assimilation(ES-MDA). The ES-MDA is improved with the 5th order Gaspari-Cohn distance dependent covariance localisation method. The Fluid Flow Forward problem is solved using the Eclipse Reservoir Simulator. 
+It is hoped this material will help new PhD/Masters Students involved in the Inverse problem in Reservoir Engineering known as History Matching, to "catch-up" with the computation necessary for the basic concepts in inverse and ill-possed subsurface flow problems
