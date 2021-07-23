@@ -1001,7 +1001,7 @@ def ESMDA(sgsim,sgsimporo,modelError,CM,f, N, Sim1,alpha):
         rndm[ik,:] = np.random.randn(1,Ne) 
         rndm[ik,:] = rndm[ik,:] - np.mean(kkk,axis=1)
         rndm[ik,:] = rndm[ik,:] / np.std(kkk, axis=1)
-        Dj[ik,:] = Dj[ik,:] + np.sqrt((alpha))*np.sqrt(cp.asnumpy(R[ik,])) \
+        Dj[ik,:] = Dj[ik,:] + np.sqrt(cp.asnumpy(alpha))*np.sqrt(cp.asnumpy(R[ik,])) \
             * rndm[ik,:]   
             
     Dj=cp.asarray(Dj)  
@@ -1253,7 +1253,7 @@ def ESMDA_AEE(sgsim,sgsimporo,modelError,CM,f, N, Sim1,alpha):
         rndm[ik,:] = np.random.randn(1,Ne) 
         rndm[ik,:] = rndm[ik,:] - np.mean(kkk,axis=1)
         rndm[ik,:] = rndm[ik,:] / np.std(kkk, axis=1)
-        Dj[ik,:] = Dj[ik,:] + np.sqrt((alpha))*np.sqrt(cp.asnumpy(R[ik,])) \
+        Dj[ik,:] = Dj[ik,:] + np.sqrt(cp.asnumpy(alpha))*np.sqrt(cp.asnumpy(R[ik,])) \
             * rndm[ik,:]   
             
     Dj=cp.asarray(Dj)  
@@ -1385,7 +1385,7 @@ def ESMDA_CCR(sgsim,f, N, Sim1,alpha):
         rndm[ik,:] = np.random.randn(1,Ne) 
         rndm[ik,:] = rndm[ik,:] - np.mean(kkk,axis=1)
         rndm[ik,:] = rndm[ik,:] / np.std(kkk, axis=1)
-        Dj[ik,:] = Dj[ik,:] + np.sqrt((alpha))*np.sqrt(cp.asnumpy(R[ik,])) \
+        Dj[ik,:] = Dj[ik,:] + np.sqrt(cp.asnumpy(alpha))*np.sqrt(cp.asnumpy(R[ik,])) \
             * rndm[ik,:]   
             
     Dj=cp.asarray(Dj)  
@@ -1704,7 +1704,7 @@ def EnKF(sgsim,sgsimporo,modelError,CM,f, N, Sim1):
         rndm[ik,:] = np.random.randn(1,Ne) 
         rndm[ik,:] = rndm[ik,:] - np.mean(kkk,axis=1)
         rndm[ik,:] = rndm[ik,:] / np.std(kkk, axis=1)
-        Dj[ik,:] = Dj[ik,:] + np.sqrt((alpha1))*np.sqrt(cp.asnumpy(R[ik,])) \
+        Dj[ik,:] = Dj[ik,:] + np.sqrt(cp.asnumpy(alpha1))*np.sqrt(cp.asnumpy(R[ik,])) \
             * rndm[ik,:]   
             
     Dj=cp.asarray(Dj)  
@@ -1895,7 +1895,7 @@ def ESMDA_Localisation(sgsim,sgsimporo,modelError,CM,f, N, Sim1,alpha,nx,ny,nz,c
         rndm[ik,:] = np.random.randn(1,Ne) 
         rndm[ik,:] = rndm[ik,:] - np.mean(kkk,axis=1)
         rndm[ik,:] = rndm[ik,:] / np.std(kkk, axis=1)
-        Dj[ik,:] = Dj[ik,:] + np.sqrt((alpha))*np.sqrt(cp.asnumpy(R[ik,])) \
+        Dj[ik,:] = Dj[ik,:] + np.sqrt(cp.asnumpy(alpha))*np.sqrt(cp.asnumpy(R[ik,])) \
             * rndm[ik,:]   
             
     Dj=cp.asarray(Dj)  
@@ -2051,7 +2051,7 @@ def ESMDA_Levelset(N_ens,m_ens,prod_ens,alpha,Nop,True_signal,Nx,\
         rndm[ik,:] = np.random.randn(1,Ne) 
         rndm[ik,:] = rndm[ik,:] - np.mean(kkk,axis=1)
         rndm[ik,:] = rndm[ik,:] / np.std(kkk, axis=1)
-        Dj[ik,:] = Dj[ik,:] + np.sqrt((alpha))*np.sqrt(cp.asnumpy(R[ik,])) \
+        Dj[ik,:] = Dj[ik,:] + np.sqrt((alpha))*np.sqrt((R[ik,])) \
             * rndm[ik,:]   
             
     Dj=cp.asarray(Dj)  
